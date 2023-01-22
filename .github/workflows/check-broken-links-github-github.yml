@@ -4,17 +4,19 @@ name: 'Link Checker: All English'
 # **Why we have it**: To make sure all links connect correctly.
 # **Who does it impact**: Docs content.
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - master
-  pull_request:
+# Updated this section to reduce complexity : 
+on: [push]
+#on:
+  #workflow_dispatch:
+  #push:
+    #branches:
+      #- master
+  #pull_request:
 
-permissions:
-  contents: read
+#permissions:
+  #contents: read
   # Needed for the 'trilom/file-changes-action' action
-  pull-requests: read
+  #pull-requests: read
 
 # This allows a subsequently queued workflow run to interrupt previous runs
 concurrency:
