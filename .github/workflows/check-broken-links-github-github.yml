@@ -30,14 +30,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.13.x
-          cache: npm
+      #- name: Setup node
+      #  uses: actions/setup-node@v3
+      #  with:
+      #    node-version: 16.13.x
+      #    cache: npm
 
-      - name: Install
-        run: npm ci
+      #- name: Install
+      #  run: npm ci
 
       # Creates file "$/files.json", among others
       - name: Gather files changed
